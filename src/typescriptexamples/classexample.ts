@@ -1,7 +1,7 @@
 import { Vehicle } from "./accessclass";
 //export keyword is needed to acces this class from another files
 export class ClassExample {
-    //We do not use the let keyword for properties (it is assigned by default)
+    //We do not use the keyword for properties (it is assigned by default)
     username:string;
     password:string;
     ssn:number;
