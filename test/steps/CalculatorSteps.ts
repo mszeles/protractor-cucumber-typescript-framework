@@ -1,6 +1,7 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { SuperCalculatorHomepage } from "../page_objects/SuperCalculatorHomepage";
 import { AngularIoHomepage } from "../page_objects/AngularIoHomepage";
+import chai from "chai";
 let homepage: SuperCalculatorHomepage = new SuperCalculatorHomepage();
 let angularHomepage: AngularIoHomepage = new AngularIoHomepage();
 Given('I navigate to {string} site', async (site: string) => {
@@ -12,7 +13,7 @@ When('I add two number {string} and {string}', async (a: string, b: string) => {
 });
 
 Then('the outout displayed should be {string}', async (result: string) => {
-  //expect(await homepage.getCalculationResult()).toBe(result);
+  chai.expect(await homepage.getCalculationResult()).to.equal(result);
 });
 
 When('I click on header link', async () => {
