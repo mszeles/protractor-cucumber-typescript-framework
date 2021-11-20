@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "protractor tmp/configuration.js"
+    "test": "protractor tmp/configuration.js",
+    "pretest": "tsc"
   },
   "repository": {
     "type": "git",
