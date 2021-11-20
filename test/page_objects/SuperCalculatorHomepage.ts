@@ -16,26 +16,26 @@ export class SuperCalculatorHomepage {
       browser.get('http://juliemr.github.io/protractor-demo/');
     }
   
-    addNumbers(a: number, b: number): void {
-        return this.operationOnNumbers(a, b, "ADDITION");
+    async addNumbers(a: number, b: number): Promise<void> {
+        await this.operationOnNumbers(a, b, "ADDITION");
     }
 
-    setNumbers(a: number, b: number): void {
-        SuperCalculatorHomepage.firstField.sendKeys(a);
-        SuperCalculatorHomepage.secondField.sendKeys(b);
+    async setNumbers(a: number, b: number): Promise<void> {
+        await SuperCalculatorHomepage.firstField.sendKeys(a);
+        await SuperCalculatorHomepage.secondField.sendKeys(b);
     }
 
-    operationOnNumbers(a: number, b: number, operation: string) {
-        this.setNumbers(a, b);
-        SuperCalculatorHomepage.operatorSelector.element(by.css("option[value='" + operation + "']")).click();
-        SuperCalculatorHomepage.goButton.click();
+    async operationOnNumbers(a: number, b: number, operation: string) {
+        await this.setNumbers(a, b);
+        await SuperCalculatorHomepage.operatorSelector.element(by.css("option[value='" + operation + "']")).click();
+        await SuperCalculatorHomepage.goButton.click();
     }
 
     multiplyNumbers(a: number, b: number): void {
         this.operationOnNumbers(a, b, "MULTIPLICATION");
     }
   
-    getCalculationResult() {
+    async getCalculationResult() {
       return SuperCalculatorHomepage.calculationResult.getText();
     }
 
