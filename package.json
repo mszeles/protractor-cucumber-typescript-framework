@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "protractor tmp/configuration.js",
-    "pretest": "tsc"
+    "pretest": "tsc",
+    "protractor": "./node_modules/protractor/built/cli.js",
+    "webdriver-update": "./node_modules/.bin/webdriver-manager update"
   },
   "repository": {
     "type": "git",
