@@ -1,14 +1,17 @@
 Feature: Validate calculator app functionality
+    @calculator
     Scenario: Calculator add functionality testing
         Given I navigate to "http://juliemr.github.io/protractor-demo/" site
         When I add two number "3" and "5"
         Then the outout displayed should be "8"
 
+    @calculator
     Scenario: Calculator add functionality testing
         Given I navigate to "http://juliemr.github.io/protractor-demo/" site
         When I add two number "1" and "1"
         Then the outout displayed should be "2"
 
+    @angular
     Scenario Outline: Angular js search testing
         Given I navigate to "https://angularjs.org/" site
         When I click on header link

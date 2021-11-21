@@ -1,2 +1,2 @@
-let {setDefaultTimeout} = require('cucumber');
+let {setDefaultTimeout} = require('@cucumber/cucumber');
 setDefaultTimeout(60 * 1000);
