@@ -3,7 +3,7 @@ Feature: Validate calculator app functionality
     Scenario: Calculator add functionality testing
         Given I navigate to "http://juliemr.github.io/protractor-demo/" site
         When I add two number "3" and "5"
-        Then the outout displayed should be "8"
+        Then the outout displayed should be "9"
 
     @calculator
     Scenario: Calculator add functionality testing
